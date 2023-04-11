@@ -1,1 +1,75 @@
-$clr-primary: #333;
+@import './mixins';
+
+$colors: (
+  primary: (
+    200: hsl(25, 100%, 94%),
+    400: hsl(26, 100%, 55%),
+  ),
+  secondary: (
+    100: hsl(0, 0%, 100%),
+    200: hsl(223, 64%, 98%),
+    300: hsl(220, 14%, 75%),
+    400: hsl(219, 9%, 45%),
+    500: hsl(220, 13%, 13%),
+    800: hsl(0, 0%, 0%),
+  ),
+);
+
+$font-sizes: (
+  small: (
+    100: 0.75rem,
+    //company title
+    200: 0.9375rem,
+    //text
+    300: 1.125rem,
+    // navigation
+    400: 1.75rem,
+    //product tilte - price
+  ),
+  large: (
+    100: 0.8125rem,
+    //company title
+    200: 1rem,
+    //text
+    300: 0.9375rem,
+    // navigation
+    400: 2.75rem,
+    //product tilte - price
+  ),
+);
+
+$font-weights: (
+  400: 400,
+  700: 700,
+);
+
+$breakpoints: (
+  small: 36rem,
+  medium: 48rem,
+  large: 62em,
+);
+
+:root {
+  // Colors
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // font-sizes
+  @each $screen, $sizes in $font-sizes {
+    @if $screen == small {
+      @each $size, $value in $sizes {
+        --fz-#{$size}: #{$value};
+      }
+    } @else {
+      //mixin
+      @include mq($screen) {
+        @each $size, $value in $sizes {
+          --fz-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
