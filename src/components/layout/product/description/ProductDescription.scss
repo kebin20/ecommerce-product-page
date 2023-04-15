@@ -1,0 +1,57 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.product-description {
+  padding: 1.5rem 1rem;
+  font-weight: 600;
+
+  &__brand {
+    text-transform: uppercase;
+    color: var(--clr-primary-400);
+    font-size: var(--fz-100);
+    letter-spacing: 1.85px;
+  }
+
+  &__title {
+    margin: 1rem 0;
+    font-size: var(--fz-400);
+  }
+
+  &__para {
+    margin-bottom: 1.5rem;
+    color: var(--clr-secondary-400);
+    font-weight: 300;
+    font-size: var(--fz-200);
+  }
+
+  //Prices
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+
+    @include mq(medium) {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 0.625rem;
+    }
+
+    &--current {
+      font-size: var(--fz-400);
+    }
+
+    &--discount {
+      background-color: var(--clr-primary-200);
+      color: var(--clr-primary-400);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      margin-right: auto;
+    }
+
+    &--original {
+      color: var(--clr-secondary-300);
+      text-decoration: line-through;
+    }
+  }
+}

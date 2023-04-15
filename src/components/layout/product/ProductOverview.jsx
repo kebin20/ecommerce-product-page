@@ -1,5 +1,11 @@
+import { ProductDescription } from '../../ExportComponents';
+
 const ProductOverview = () => {
-  return <div></div>;
+  return (
+    <div>
+      <ProductDescription />
+    </div>
+  );
 };
 
 export default ProductOverview;
