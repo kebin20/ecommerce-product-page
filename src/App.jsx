@@ -1,9 +1,11 @@
-import React from 'react';
-import { ProductOverview } from './components/ExportComponents';
+import React from "react";
+
+import { ProductOverview, Navigation } from "./components/ExportComponents";
 
 function App() {
   return (
     <div>
+      <Navigation />
       <ProductOverview />
     </div>
   );

@@ -1,0 +1,35 @@
+@import "../../../sass/variables";
+
+.header {
+  background-color: var(--clr-secondary-100);
+  color: var(--clr-secondary-500);
+
+  .nav {
+    background-color: var(--clr-primary-200);
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 15.625rem; //250px
+      height: 100vh;
+      background-color: var(--clr-primary-400);
+    }
+  }
+}
+
+/* Tablet portrait and larger */
+@media only screen and (min-width: 37.5em) {
+  .links {
+    display: flex;
+
+    & .link {
+      position: relative;
+      font-size: var(--fz-300);
+      color: var(--clr-secondary-100);
+    }
+  }
+}

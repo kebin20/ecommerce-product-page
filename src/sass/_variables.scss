@@ -1,19 +1,19 @@
 @import './mixins';
-
 $colors: (
   primary: (
-    200: hsl(25, 100%, 94%),
-    400: hsl(26, 100%, 55%),
+    200: #ffede0,
+    400: #ff7d1a,
   ),
   secondary: (
-    100: hsl(0, 0%, 100%),
-    200: hsl(223, 64%, 98%),
-    300: hsl(220, 14%, 75%),
-    400: hsl(219, 9%, 45%),
-    500: hsl(220, 13%, 13%),
-    800: hsl(0, 0%, 0%),
+    100: #ffffff,
+    200: #f7f8fd,
+    300: #b6bcc8,
+    400: #68707d,
+    500: #1d2026,
+    800: #000000,
   ),
 );
+
 
 $font-sizes: (
   small: (
@@ -49,11 +49,13 @@ $breakpoints: (
   large: 62em,
 );
 
+
+
 :root {
-  // Colors
+  // Colors $color: primary, secondary , $shades = map() need to loop, $shade: 100, 
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
-      --clr-#{$color}-#{$shade}: #{$value};
+      --clr-#{$color}-#{$shade}: #{$value};  
     }
   }
 
