@@ -1,6 +1,6 @@
 @mixin mq($key) {
   // https://www.w3schools.com/sass/sass_functions_map.php
-  $size: map-get($breakpoints, $key); //small medium large
+  $size: map-get($breakpoints, $key);
 
   @media only screen and (min-width: $size) {
     @content;
