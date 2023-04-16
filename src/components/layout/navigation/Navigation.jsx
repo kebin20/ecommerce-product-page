@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../../assets/logo.svg";
-import { Hamburger, NavigationItem, iconCart, avatar } from "../../ExportComponents";
+import { Hamburger, NavigationItem, iconCart, avatar, logo } from "../../ExportComponents";
+import './Navigation.scss';
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,11 +15,11 @@ const Navigation = () => {
     <header className="header">
       <nav className="nav">
         <img className="logo" alt="personal logo" src={logo} />
-        <ul className="links">
           <Hamburger
             toggle={toggle}
             onToggleHamburgerMenu={toggleHamburgerMenu}
           />
+        <ul className="links">
           {navItems.map((item, index) => (
             <NavigationItem
               key={index}
@@ -30,9 +30,13 @@ const Navigation = () => {
               {item}
             </NavigationItem>
           ))}
-          <div className="cart">{iconCart}</div>
-          <div className="user">{avatar}</div> 
         </ul>
+        <div className="cart">
+          <img src={iconCart} alt="" />
+        </div>
+        <div className="user">
+          <img src={avatar} alt="" />
+        </div>  
       </nav>
     </header>
   );

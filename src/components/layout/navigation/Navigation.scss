@@ -1,9 +1,23 @@
+@import "../../../sass/variables";
+
 .header {
   background-color: var(--clr-secondary-100);
   color: var(--clr-secondary-500);
 
   .nav {
-    display: flex;
+    background-color: var(--clr-primary-200);
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 15.625rem; //250px
+      height: 100vh;
+      background-color: var(--clr-primary-400);
+    }
   }
 }
 
