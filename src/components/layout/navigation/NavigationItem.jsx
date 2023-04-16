@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-const NavigationListItem = (props) => {
+const NavigationItem = (props) => {
   return (
     <>
       <li>
@@ -17,4 +17,4 @@ const NavigationListItem = (props) => {
   );
 };
 
-export default NavigationListItem;
+export default NavigationItem;
