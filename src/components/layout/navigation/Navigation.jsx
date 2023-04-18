@@ -14,7 +14,7 @@ const Navigation = () => {
   const [toggle, setToggle] = useState(false);
   const [menuImg, setMenuImg] = useState(iconMenu);
 
-  //runs this snippet everytime the toggle state changes
+  // runs this snippet everytime the toggle state changes
   useEffect(() => {
     if (toggle) {
       setMenuImg(iconClose);
@@ -48,8 +48,6 @@ const Navigation = () => {
               key={index}
               onClick={toggleMenu}
               href="#"
-              //Removed the classname property since you have hardcoded it as 'link' and added it directly to the ankerlink
-              // className="link"
             >
               {item}
             </NavigationItem>
