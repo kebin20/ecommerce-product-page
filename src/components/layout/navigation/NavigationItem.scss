@@ -3,6 +3,7 @@
 .link {
   display: block;
   position: relative;
+  padding: 0 1.25rem;
 
   &:link,
   &:visited {
@@ -18,6 +19,7 @@
       &::before {
         display: block;
         position: absolute;
+        left: 0;
         bottom: -45px;
         content: '';
         height: 3px;

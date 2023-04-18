@@ -11,7 +11,7 @@ import {
 import './Navigation.scss';
 
 const Navigation = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const [menuImg, setMenuImg] = useState(iconMenu);
 
   //runs this snippet everytime the toggle state changes
@@ -28,18 +28,21 @@ const Navigation = () => {
   };
 
   const navItems = ['Collections', 'Men', 'Women', 'About', 'Contact'];
-  const navigationClasses = toggle ? 'nav show' : 'nav';
+  const linksClasses = toggle ? 'links show' : 'links';
 
   return (
     <header className="header">
-      <Hamburger menuImg={menuImg} onToggleMenu={toggleMenu} toggle={toggle} />
-      <a href="#" className="logo">
-        <img className="logo" alt="personal logo" src={logo} />
-      </a>
+      <nav className="nav">
+        <Hamburger
+          menuImg={menuImg}
+          onToggleMenu={toggleMenu}
+          toggle={toggle}
+        />
+        <a href="#" className="logo">
+          <img className="logo" alt="personal logo" src={logo} />
+        </a>
 
-      {/* This is our menu with the links */}
-      <nav className={navigationClasses} aria-labelledby="btn-menu">
-        <ul className="links">
+        <ul className={linksClasses} id="navigationLinks">
           {navItems.map((item, index) => (
             <NavigationItem
               key={index}
@@ -52,14 +55,14 @@ const Navigation = () => {
             </NavigationItem>
           ))}
         </ul>
-      </nav>
 
-      <div className="cart">
-        <img src={iconCart} alt="cart" />
-      </div>
-      <div className="user">
-        <img src={avatar} alt="user" />
-      </div>
+        <div className="cart">
+          <img src={iconCart} alt="cart" />
+        </div>
+        <div className="user">
+          <img src={avatar} alt="user" />
+        </div>
+      </nav>
     </header>
   );
 };

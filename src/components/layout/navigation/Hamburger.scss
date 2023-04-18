@@ -5,6 +5,7 @@
   cursor: pointer;
   position: relative;
   z-index: 11;
+  margin-top: 0.2rem;
 
   @include mq(large) {
     display: none;

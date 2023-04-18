@@ -2,43 +2,19 @@
 @import '../../../sass/mixins';
 
 .header {
-  padding: 1.5rem;
-  background-color: var(--clr-secondary-100);
-  color: var(--clr-secondary-500);
-  display: grid;
-  grid-template-columns: max-content 1fr max-content max-content;
-  align-items: center;
-  gap: 1rem;
-
-  @include mq(large) {
-    height: 7rem; //112px
-    gap: 2.5rem;
-    border-bottom: 1px solid var(--clr-secondary-250);
-  }
-
   .nav {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content;
+    align-items: center;
+    gap: 1rem;
     background-color: var(--clr-secondary-100);
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 15.625rem; //250px
-    height: 100vh;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
+    color: var(--clr-secondary-500);
 
     @include mq(large) {
-      position: static;
-      opacity: 1;
-      transform: translateX(0);
-      flex-direction: row;
-      height: auto;
-    }
-
-    &.show {
-      transform: translateX(0);
-      opacity: 1;
+      height: 7rem; //112px
+      gap: 2.5rem;
+      border-bottom: 1px solid var(--clr-secondary-250);
     }
 
     .links {
@@ -48,13 +24,35 @@
       background-color: var(--clr-secondary-100);
       padding: 5.75rem 1.5rem 0;
 
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 15.625rem; //250px
+      height: 100vh;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: transform 0.4s, opacity 0.4s;
+
       @include mq(large) {
+        position: static;
+        opacity: 1;
+        transform: translateX(0);
         flex-direction: row;
+        height: auto;
+        flex-direction: row;
+        gap: 0;
         padding: 0;
         margin-left: 1.5rem;
       }
+
+      &.show {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
+
   .user {
     width: 28px;
     height: 28px;
