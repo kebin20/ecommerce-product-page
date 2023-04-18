@@ -7,13 +7,13 @@ $colors: (
   secondary: (
     100: #ffffff,
     200: #f7f8fd,
+    250: #dcdcdc,
     300: #b6bcc8,
     400: #68707d,
     500: #1d2026,
     800: #000000,
   ),
 );
-
 
 $font-sizes: (
   small: (
@@ -49,13 +49,11 @@ $breakpoints: (
   large: 62em,
 );
 
-
-
 :root {
-  // Colors $color: primary, secondary , $shades = map() need to loop, $shade: 100, 
+  // Colors $color: primary, secondary , $shades = map() need to loop, $shade: 100,
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {
-      --clr-#{$color}-#{$shade}: #{$value};  
+      --clr-#{$color}-#{$shade}: #{$value};
     }
   }
 
