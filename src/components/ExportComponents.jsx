@@ -16,6 +16,7 @@ export { default as ProductOverview } from './layout/product/ProductOverview';
 export { default as ModalGallery } from './modalGallery/ModalGallery';
 
 export { default as Button } from './UI/Button';
+export {default as Carousel} from './UI/Carousel';
 
 // Icons
 export { default as logo } from '../assets/logo.svg';
