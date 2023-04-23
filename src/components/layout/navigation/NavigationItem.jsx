@@ -2,7 +2,7 @@
 import React from 'react';
 import './NavigationItem.scss';
 
-//I am using object destructuring to avoid this repetitive props.
+// I am using object destructuring to avoid this repetitive props.
 const NavigationItem = ({ onClick, href, children }) => {
   return (
     <li className="links__item">
