@@ -27,7 +27,7 @@ const ProductOverview = () => {
           title="Minus Icon"
           ariaLabel={'Decrement product quantity'}
         />
-        <span>0</span>
+        <span className="counter-number">0</span>
         <Button
           onClick={addItem}
           src={iconPlus}
@@ -35,14 +35,15 @@ const ProductOverview = () => {
           ariaLabel={'Increment product quantity'}
         />
       </div>
-      <Button
-        onClick={addToCart}
-        src={iconCart}
-        title="Cart icon"
-        ariaLabel={'add to cart'}
-      >
-        Add to Cart
-      </Button>
+      <div className="cart-button">
+        <Button
+          onClick={addToCart}
+          src={iconCart}
+          title="Cart icon"
+          ariaLabel={'add to cart'}
+        ></Button>
+        <span>Add to Cart</span>
+      </div>
     </div>
   );
 };

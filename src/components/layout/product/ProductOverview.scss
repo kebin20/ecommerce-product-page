@@ -2,8 +2,29 @@
 @import '../../../sass/mixins';
 
 .item-counter {
+  border-radius: 10px;
   display: flex;
-  background-color: red;
-  padding: 1em 1.5em;
-  margin-inline: 1.5em;
+  justify-content: space-between;
+  background-color: var(--clr-secondary-200);
+  padding: 1em;
+  margin-inline: 1rem;
+  max-width: 22rem;
+}
+
+.counter-number {
+  font-weight: 700;
+}
+
+.cart-button {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-secondary-100);
+  padding: 1em;
+  margin-inline: 1rem;
+  max-width: 22rem;
+  margin-top: 1em;
+  box-shadow: 0px 20px 50px -20px #ff7e1b;
 }
