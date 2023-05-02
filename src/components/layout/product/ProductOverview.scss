@@ -1,0 +1,9 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.item-counter {
+  display: flex;
+  background-color: red;
+  padding: 1em 1.5em;
+  margin-inline: 1.5em;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   ProductDescription,
   Carousel,
@@ -6,10 +6,10 @@ import {
   iconPlus,
   iconMinus,
   iconCart,
-} from "../../ExportComponents";
+} from '../../ExportComponents';
+import './ProductOverview.scss';
 
 const ProductOverview = () => {
-
   function deleteItem() {}
 
   function addItem() {}
@@ -25,21 +25,21 @@ const ProductOverview = () => {
           onClick={deleteItem}
           src={iconMinus}
           title="Minus Icon"
-          ariaLabel={"Decrement product quantity"}
+          ariaLabel={'Decrement product quantity'}
         />
         <span>0</span>
         <Button
           onClick={addItem}
           src={iconPlus}
           title="Plus Icon"
-          ariaLabel={"Increment product quantity"}
+          ariaLabel={'Increment product quantity'}
         />
       </div>
       <Button
         onClick={addToCart}
         src={iconCart}
         title="Cart icon"
-        ariaLabel={"add to cart"}
+        ariaLabel={'add to cart'}
       >
         Add to Cart
       </Button>
