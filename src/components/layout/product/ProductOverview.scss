@@ -1,0 +1,35 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.button-container {
+  margin-inline: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .item-counter {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--clr-secondary-200);
+    padding: 1em;
+    max-width: 22rem;
+  }
+
+  .counter-number {
+    font-weight: 700;
+  }
+
+  .cart-button {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-secondary-100);
+    padding: 1em;
+    max-width: 22rem;
+    box-shadow: 0px 20px 50px -20px #ff7e1b;
+  }
+}

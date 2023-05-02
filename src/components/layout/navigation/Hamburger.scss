@@ -4,7 +4,7 @@
 #btn-menu {
   cursor: pointer;
   position: relative;
-  z-index: 11;
+  z-index: 110;
   margin-top: 0.2rem;
 
   @include mq(large) {
