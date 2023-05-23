@@ -6,21 +6,21 @@ export { default as ShoppingCartList } from "./Cart/ShoppingCartList";
 export { default as ShoppingCartListItem } from "./Cart/ShoppingCartListItem";
 export { default as User } from "./user/User";
 
-main
+
 export { default as ProductActions } from './layout/product/description/ProductActions';
 export { default as ProductDescription } from './layout/product/description/ProductDescription';
 export { default as ProductGallery } from './layout/product/gallery/ProductGallery';
 export { default as ProductGalleryList } from './layout/product/gallery/ProductGalleryList';
 export { default as ProductOverview } from './layout/product/ProductOverview';
-main
+
 
 export { default as ModalGallery } from "./modalGallery/ModalGallery";
 
-main
+
 export { default as Button } from './UI/Button';
 export { default as Carousel } from './UI/Carousel';
 export { default as Container } from './UI/Container';
-main
+
 
 // Icons
 export { default as logo } from "../assets/logo.svg";

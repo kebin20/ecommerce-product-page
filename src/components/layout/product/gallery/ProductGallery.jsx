@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
-import './ProductGallery.scss';
-import { useState } from 'react';
-mport { ProductGalleryList } from '../../../ExportComponents';
+import "./ProductGallery.scss";
+import { useState } from "react";
+import { ProductGalleryList } from "../../../ExportComponents";
 
 const ProductGallery = ({ images }) => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -23,7 +23,7 @@ const ProductGallery = ({ images }) => {
           srcSet={`${images[imgIndex].mobile}, ${images[imgIndex].desktop} 2x`}
           src={images[imgIndex].desktop}
           alt="shoes"
-          style={{ filter: imageLoaded ? 'blur(0px)' : 'blur(15px)' }}
+          style={{ filter: imageLoaded ? "blur(0px)" : "blur(15px)" }}
           onLoad={imageLoadHandler}
         />
       </div>
