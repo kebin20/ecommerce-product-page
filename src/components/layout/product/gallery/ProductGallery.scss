@@ -1,0 +1,20 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.product-gallery {
+  display: none;
+
+  @include mq(medium) {
+    display: block;
+    padding: 1.5rem;
+  }
+
+  .product-gallery--display-img {
+    @include image-card;
+    margin-bottom: 2rem;
+
+    & > img {
+      transition: filter 0.4s;
+    }
+  }
+}
