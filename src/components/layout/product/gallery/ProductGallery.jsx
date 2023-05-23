@@ -1,6 +1,8 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import './ProductGallery.scss';
-import { useEffect, useState } from 'react';
-import { ProductGalleryList } from '../../../ExportComponents';
+import { useState } from 'react';
+mport { ProductGalleryList } from '../../../ExportComponents';
 
 const ProductGallery = ({ images }) => {
   const [imgIndex, setImgIndex] = useState(0);
