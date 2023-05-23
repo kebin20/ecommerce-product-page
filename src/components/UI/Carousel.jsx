@@ -1,30 +1,11 @@
-import React, { useState, useEffect } from "react";
-import {
-  iconNext,
-  iconPrevious,
-  Button,
-  imageOne,
-  imageTwo,
-  imageThree,
-  imageFour,
-  imageOneThumb,
-  imageTwoThumb,
-  imageThreeThumb,
-  imageFourThumb,
-} from "../ExportComponents";
-import "./Carousel.scss";
+import React, { useState, useEffect } from 'react';
+import { iconNext, iconPrevious, Button } from '../ExportComponents';
+import './Carousel.scss';
 
-const Carousel = () => {
+const Carousel = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLeftBtnActive, setIsLeftBtnActive] = useState(false);
   const [isRightBtnActive, setIsRightBtnActive] = useState(true);
-
-  const images = [
-    { desktop: imageOne, mobile: imageOneThumb },
-    { desktop: imageTwo, mobile: imageTwoThumb },
-    { desktop: imageThree, mobile: imageThreeThumb },
-    { desktop: imageFour, mobile: imageFourThumb },
-  ];
 
   useEffect(() => {
     if (activeIndex === 0) {
@@ -48,11 +29,11 @@ const Carousel = () => {
   return (
     <div className="carousel">
       <Button
-        className={`btn-carousel previous ${isLeftBtnActive ? "show" : ""}`}
+        className={`btn-carousel previous ${isLeftBtnActive ? 'show' : ''}`}
         onClick={goToPreviousImage}
         src={iconPrevious}
         title="Previous Image"
-        ariaLabel={"Navigate to previous button"}
+        ariaLabel={'Navigate to previous button'}
         disabled={isLeftBtnActive}
       />
       <div
@@ -60,20 +41,29 @@ const Carousel = () => {
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {images.map((image, i) => (
-          <picture key={i}>
-            <source media="(max-width: 300px)" srcSet={image.mobile} />
-            <source media="(min-width: 301px)" srcSet={image.desktop} />
-            <img srcSet={image.mobile} alt="shoes" />
-          </picture>
+          // <picture key={i}>
+          //   <source media="(max-width: 300px)" srcSet={image.mobile} />
+          //   <source media="(min-width: 301px)" srcSet={image.desktop} />
+          //   <img srcSet={image.mobile} alt="shoes" />
+          // </picture>
+
+          <div key={i} className="carousel-images--item">
+            {/* Show the right image based on the pixel density of the device */}
+            <img
+              srcSet={`${image.mobile}, ${image.desktop} 2x`}
+              src={image.desktop}
+              alt="shoes"
+            />
+          </div>
         ))}
       </div>
       {isRightBtnActive && (
         <Button
-          className={`btn-carousel next ${isRightBtnActive ? "show" : ""}`}
+          className={`btn-carousel next ${isRightBtnActive ? 'show' : ''}`}
           onClick={goToNextImage}
           src={iconNext}
           title="Next Image"
-          ariaLabel={"Navigate to next button"}
+          ariaLabel={'Navigate to next button'}
           disabled={isRightBtnActive}
         />
       )}

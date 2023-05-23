@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { ProductOverview, Navigation } from "./components/ExportComponents";
+import {
+  ProductOverview,
+  Navigation,
+  Container,
+} from './components/ExportComponents';
 
 function App() {
   return (
-    <div>
+    <Container>
       <Navigation />
       <ProductOverview />
-    </div>
+    </Container>
   );
 }
 

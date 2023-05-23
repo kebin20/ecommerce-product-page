@@ -10,13 +10,13 @@ export { default as ProductActions } from './layout/product/description/ProductA
 export { default as ProductDescription } from './layout/product/description/ProductDescription';
 export { default as ProductGallery } from './layout/product/gallery/ProductGallery';
 export { default as ProductGalleryList } from './layout/product/gallery/ProductGalleryList';
-export { default as ProductGalleryListItem } from './layout/product/gallery/ProductGalleryListItem';
 export { default as ProductOverview } from './layout/product/ProductOverview';
 
 export { default as ModalGallery } from './modalGallery/ModalGallery';
 
 export { default as Button } from './UI/Button';
-export {default as Carousel} from './UI/Carousel';
+export { default as Carousel } from './UI/Carousel';
+export { default as Container } from './UI/Container';
 
 // Icons
 export { default as logo } from '../assets/logo.svg';

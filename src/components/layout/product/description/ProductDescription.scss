@@ -4,6 +4,12 @@
 .product-description {
   padding: 1.5rem 1rem;
   font-weight: 600;
+  max-width: 592px;
+  margin-inline: auto;
+
+  @include mq(medium) {
+    max-width: 472px;
+  }
 
   &__brand {
     text-transform: uppercase;
