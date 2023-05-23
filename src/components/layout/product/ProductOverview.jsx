@@ -23,6 +23,8 @@ import './ProductOverview.scss';
 main
 
 const ProductOverview = () => {
+kevin-branch
+
   const images = [
     { desktop: imageOne, mobile: imageOneThumb },
     { desktop: imageTwo, mobile: imageTwoThumb },
@@ -31,6 +33,7 @@ const ProductOverview = () => {
   ];
 
   function deleteItem() {}
+ main
 
   function addItem() {}
 
