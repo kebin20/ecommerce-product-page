@@ -10,7 +10,6 @@ import {
 import "./ProductOverview.scss";
 
 const ProductOverview = () => {
-  function deleteItem() {}
 
   function addItem() {}
 
