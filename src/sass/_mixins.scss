@@ -32,7 +32,7 @@
   }
 
   &.previous {
-     left: $position;
+    left: $position;
     & > img {
       margin-right: 3px;
     }
@@ -44,4 +44,9 @@
       margin-left: 3px;
     }
   }
+}
+
+@mixin image-card {
+  border-radius: 15px;
+  overflow: hidden;
 }
