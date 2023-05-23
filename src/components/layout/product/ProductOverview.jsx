@@ -5,10 +5,7 @@ import {
   Button,
   iconPlus,
   iconMinus,
-main
   iconCartWhite,
-
-  iconCart,
   ProductGallery,
   imageOne,
   imageTwo,
@@ -20,11 +17,9 @@ main
   imageFourThumb,
 } from '../../ExportComponents';
 import './ProductOverview.scss';
-main
+
 
 const ProductOverview = () => {
-kevin-branch
-
   const images = [
     { desktop: imageOne, mobile: imageOneThumb },
     { desktop: imageTwo, mobile: imageTwoThumb },
@@ -33,14 +28,12 @@ kevin-branch
   ];
 
   function deleteItem() {}
- main
 
   function addItem() {}
 
   function addToCart() {}
 
   return (
-main
     <main className="product-overview">
       <Carousel images={images} />
       <ProductGallery images={images} />
@@ -71,7 +64,6 @@ main
             ></Button>
             <span>Add to Cart</span>
           </div>
-main
         </div>
       </div>
     </main>
